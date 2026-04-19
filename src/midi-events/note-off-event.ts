@@ -22,8 +22,8 @@ class NoteOffEvent implements MidiEvent {
 		this.name = 'NoteOffEvent';
 		this.channel = fields.channel || 1;
 		this.pitch = fields.pitch;
-		this.velocity = fields.velocity || 50;
-		this.tick = fields.tick || null;
+		this.velocity = fields.velocity ?? 50;
+		this.tick = fields.tick ?? null;
 		this.data = fields.data;
 		this.delta = fields.delta !== undefined ? fields.delta : Utils.getTickDuration(fields.duration);
 		this.status = 0x80;

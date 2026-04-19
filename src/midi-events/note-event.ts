@@ -36,8 +36,8 @@ class NoteEvent implements AbstractEvent {
 		this.grace = fields.grace;
 		this.repeat = fields.repeat || 1;
 		this.sequential = fields.sequential || false;
-		this.tick = fields.startTick || fields.tick || null;
-		this.velocity = fields.velocity || 50;
+		this.tick = fields.startTick ?? fields.tick ?? null;
+		this.velocity = fields.velocity ?? 50;
 		this.wait = fields.wait || 0;
 
 		this.tickDuration = Utils.getTickDuration(this.duration);
