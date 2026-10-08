@@ -5,6 +5,7 @@
   "main": "build/index.js",
   "exports": {
     ".": {
+      "types": "./build/types/main.d.ts",
       "import": "./build/index.js",
       "require": "./build/index.js"
     }
